@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="player-container">
+        <!-- Song -->
+        <div class="img-container">
+            <img src="assets/baris-manco.jpg" class="music-paused" alt="Album Art">
+            <div class="turntables"></div>
+        </div>
+        <h2 id="title">Ahmet Beyin Ceketi</h2>
+        <h3 id="artist">Barış Manço</h3>
+        <audio src=""></audio>
+        <!-- Progress -->
+        <div class="progress-container" id="progress-container">
+            <div class="progress" id="progress"></div>
+            <div class="duration-wrapper">
+                <span id="current-time"></span>
+                <span id="duration"></span>
+            </div>
+        </div>
+        <div class="controls-container">
+            <!-- Volume Controls -->
+            <div class="volume-container">
+                <i class="fas fa-volume-down volume-button" id="volume-btn" title="volume"></i>
+                <input id="volume-control" class="volume-control" type="range" min="0" max="1" step="0.05"
+                    oninput="setVolume(this.value)" onchange="setVolume(this.value)"></input>
+            </div>
+            <!-- Controls -->
+            <div class="player-controls">
+                <i class="fas fa-backward" id="prev" title="Previous"></i>
+                <i class="fas fa-play main-button" id="play" title="Play"></i>
+                <i class="fas fa-forward" id="next" title="Next"></i>
+            </div>
+            <!-- Loop Btn -->
+            <div class="loop-btn" id="loop-btn">
+                <i class="fas fa-sync-alt" id="loop-btn" title="volume"></i>
+            </div>
+        </div>
+    </div>
+    <!-- Script -->
+    <script src="app.js"></script>
+</body>
+
+</html>
